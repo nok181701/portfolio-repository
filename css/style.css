@@ -307,6 +307,11 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-bottom: 3em;
   }
 }
+@media screen and (max-width: 992px) {
+  .info {
+    margin-bottom: 3em;
+  }
+}
 .info li {
   width: 100%;
   float: left;
@@ -892,6 +897,17 @@ h1, h2, h3, h4, h5, h6, figure {
     display: none;
   }
 }
+@media screen and (max-width: 480px) {
+  #fh5co-consult .video {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  #fh5co-consult .video {
+    display: none;
+    margin: 0 auto;
+  }
+}
 #fh5co-consult .choose {
   width: 50%;
   padding: 4em;
@@ -900,6 +916,17 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-consult .choose {
     width: 100%;
     padding: 4em 1em;
+  }
+}
+@media screen and (max-width: 992px) {
+  #fh5co-consult .choose {
+    margin: 0 auto;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #fh5co-consult .choose h2 {
+    text-align: center;
   }
 }
 
@@ -1021,10 +1048,8 @@ input[type=text] {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Space Mono", Arial, serif;
   font-size: 16px;
   font-weight: 400;
-  border-radius: 30px;
   transition: 0.5s;
   padding: 8px 20px;
 }
