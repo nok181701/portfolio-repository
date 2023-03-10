@@ -382,6 +382,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	@media screen and (max-width: $screen-sm) {
 		margin-bottom: 3em;
 	}
+	@media screen and (max-width: $screen-md) {
+		margin-bottom: 3em;
+	}
 	li{
 		width: 100%;
 		float: left;
@@ -955,6 +958,13 @@ h1, h2, h3, h4, h5, h6, figure {
 		@media screen and (max-width: $screen-sm){
 			display: none;
 		}
+		@media screen and (max-width: $screen-xs){
+			display: none;
+		}
+		@media screen and (max-width: $screen-md){
+			display: none;
+			margin: 0 auto;
+		}
 	}
 	.choose{
 		width: 50%;
@@ -962,6 +972,16 @@ h1, h2, h3, h4, h5, h6, figure {
 		@media screen and (max-width: $screen-sm){
 			width: 100%;
 			padding: 4em 1em;
+		}
+		@media screen and (max-width: $screen-md){
+			margin: 0 auto;
+			width: 75%;
+			
+		}
+		h2{
+			@media screen and (max-width: $screen-md){
+				text-align: center;
+			}
 		}
 	}
 }
@@ -1093,10 +1113,8 @@ input[type="text"] {
 .btn {
 	margin-right: 4px;
 	margin-bottom: 4px;
-	font-family: $font-primary;
 	font-size: 16px;
 	font-weight: 400;
-	@include border-radius(30px);
 	@include transition(.5s);
 	padding: 8px 20px;
 	&.btn-md {
