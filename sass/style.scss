@@ -1297,3 +1297,32 @@ input[type="text"] {
 		opacity: 0;
 	}
 }
+.iframe-wrapper {
+	position:relative;
+	width:90%;
+	height:0;
+	padding: 30% 0 20%;
+	margin: 0 auto;
+
+	@media screen and (max-width: $screen-md) {
+		padding: 30% 0 60%;
+	}
+
+	@media screen and (max-width: $screen-sm) {
+		padding: 50% 0 100%;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		padding: 50% 0 230%;
+	}
+	}
+	
+
+	
+	.iframe-wrapper iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	}

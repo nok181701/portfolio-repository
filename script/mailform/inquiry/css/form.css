@@ -1,5 +1,140 @@
 @charset "utf-8";
 
+/* ----------------------------------------------------------
+    リセット / 新要素設定
+------------------------------------------------------------- */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, code, form, fieldset, legend, table, th, td, caption, a, article, aside, nav, section, figure, figcaption, footer, header, main, audio, canvas, video, menu, details {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+fieldset, legend, img { border: 0; }
+article, aside, nav, section, figure, figcaption, footer, header, main, menu, details { display: block; }
+video, audio, canvas {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* ----------------------------------------------------------
+    ベース
+------------------------------------------------------------- */
+html {
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    background: #fff;
+    color: #222;
+    font: 14px/1.4 Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "游ゴシック", YuGothic, sans-serif;
+    -moz-font-feature-settings: "pkna";
+    -webkit-font-feature-settings: "pkna";
+    font-feature-settings: "pkna";
+    letter-spacing: .01em;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ----------------------------------------------------------
+    要素
+------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    max-height: 100%;
+    font-weight: normal;
+    -moz-font-feature-settings: "palt";
+    -webkit-font-feature-settings: "palt";
+    font-feature-settings: "palt";
+    line-height: 1.2;
+    color: #222;
+}
+p {
+    max-height: 100%;
+    margin: 0 0 1em;
+}
+ul {
+    max-height: 100%;
+    list-style: none;
+}
+ol {
+    max-height: 100%;
+    list-style: none;
+}
+dt {
+    max-height: 100%;
+    font-weight: bold;
+}
+dd { max-height: 100%; }
+hr {
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+pre {
+    font-family: monospace, serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+figure { margin: 0 0 1em; }
+
+a { color: #04c; }
+a:link, a.visited { text-decoration: underline; }
+a:hover, a.active { text-decoration: none; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+img { vertical-align: middle; }
+
+address, cite, em, dfn, i, var { font-style: normal; }
+em { font-weight: bold; }
+strong, b { font-weight: bold; }
+code, samp, kbd { font-family: monospace, sans-serif; }
+abbr {
+    border: 0;
+    font-variant: normal;
+}
+abbr[title], dfn[title] {
+    cursor: help;
+    border-bottom: 1px dotted;
+}
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+del { text-decoration: line-through; }
+mark {
+    background-color: #ff0;
+    color: #333;
+    font-style: italic;
+    font-weight: bold;
+}
+br { *letter-spacing: 0; }
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th, td {
+    font-weight: normal;
+    text-align: left;
+}
+th { font-weight: bold; }
+caption {
+    font-weight: normal;
+    text-align: left;
+}
 
 /* ----------------------------------------------------------
     フォーム系
@@ -18,12 +153,13 @@ input, button {
 input[type=text],
 input[type=password],
 textarea {
-    width : 100% ;
+    width : 380px ;
     padding: 5px;
     background: #fff;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    outline: none;
+    border: 1px solid #ddd;
+    -moz-box-shadow: inset 3px 3px 0 0 rgba(0,0,0,0.03);
+    -webkit-box-shadow: inset 3px 3px 0 0 rgba(0,0,0,0.03);
+    box-shadow: inset 3px 3px 0 0 rgba(0,0,0,0.03);
 }
 input[type=text]:focus,
 input[type=password]:focus,
@@ -38,12 +174,8 @@ input[type=button] { cursor: pointer; }
 }
 
 input[type=submit] {
-    padding: 8px 16px;
+    padding: 5px 8px;
     cursor: pointer;
-    background: #49bbca;
-    border: #49bbca;
-    color: #fff;
-    border-radius: 4px;
 }
 
 input[type=checkbox] { cursor: pointer; }
@@ -53,7 +185,7 @@ input[type=button]:disabled,
 input[type=checkbox]:disabled { cursor: default; }
 
 textarea {
-    width : 100% ;
+    width : 410px ;
     overflow: auto;
     vertical-align: top;
 }
@@ -259,14 +391,21 @@ legend {
 /* 説明文を表示するためのidタグ */
 #txt_explain {
 	color: #000000;
-    text-align: center;
 }
 
 /* ----------------------------------------------------------
     メインコンテンツ
 ------------------------------------------------------------- */
 #wrapper {
+    width : 720px ;
+    margin: 20px auto 0;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     background : #ffffff;
+    border-left : 1px solid #b3b3b3 ;
+    border-right : 1px solid #b3b3b3 ;
+    border-bottom : 1px solid #b3b3b3 ;
 }
 
 #header { padding: 40px 25px 40px; }
@@ -289,21 +428,18 @@ legend {
     font-size: 12px;
 }
 
-#main { 
-    margin-bottom: 50px;
-}
+#main { padding: 25px; }
 
 .section { margin-bottom: 40px; }
 .section:last-child { margin-bottom: 0; }
 .section__ttl {
-    margin-top: 6rem;
-    text-align: center;
     padding: 10px;
     margin-bottom: 20px;
     font-weight: bold;
-    color:#000000;    
-    font-size: 40px;
-    font-weight: normal;
+    color:#fff;
+    background : #ff6600;
+    
+    font-size: 18px;
 }
 .section__body { padding: 0 30px; }
 
@@ -357,14 +493,13 @@ legend {
     border-left: 1px solid #ccc;
 }
 .table th {
-    background : #49bbca;
+    padding: 15px;
+    background : #444444;
     color: #ffffff;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     font-weight: bold;
-    font-size: 2rem;
-    width: 30%;
-    text-align: center;
+    font-size: 13px;
 }
 .table td {
     padding: 15px;
